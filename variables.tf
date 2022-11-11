@@ -4,6 +4,10 @@ variable "locations" {
   type        = list(string)
 }
 
+variable "synthetics_type" {
+  description = "to choose single api-test mode you should pass variables (synthetics_type=api-test) and for multi-api-test mode you should pass variables (synthetics_type=multi-api-test)"
+}
+
 variable "name" {
   description = "Name of Datadog synthetics test"
   type        = string
@@ -12,13 +16,11 @@ variable "name" {
 # Optional
 variable "api_steps" {
   description = "Steps for multistep api tests"
-  type        = list(any)
   default     = null
 }
 
 variable "assertions" {
   description = "Assertions used for the test"
-  type        = list(any)
   default     = null
 }
 
