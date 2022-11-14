@@ -9,11 +9,11 @@ terraform {
 
 variable "datadog_api_key" {
   type    = string
-  default = "7c48a2fad72e4f349afd514ec5c51bac"
+  default = ""
 }
 variable "datadog_app_key" {
   type    = string
-  default = "ed3b3cdb108612b4c39e7d5e84e1a4cea28d5601"
+  default = ""
 }
 provider "datadog" {
   api_key = var.datadog_api_key
